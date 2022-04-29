@@ -5,4 +5,3 @@ dash_bootstrap_templates
 dash_auth
 pandas
 numpy
-json
