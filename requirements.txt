@@ -1,5 +1,3 @@
-flask
-gunicorn
 dash
 plotly
 dash_bootstrap_components
