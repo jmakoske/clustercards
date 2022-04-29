@@ -1,0 +1,16 @@
+{
+    "clusters": [
+        "Vähän ostoksia, pienet tulot, pieniä lapsia",
+        "Valituksia, pieniä lapsia, ikä, pienet tulot, vähemmän koulutusta",
+        "Isompia lapsia, paljon ostoskertoja, ikä, viiniä",
+        "Runsaasti ostoksia liikkeestä ja postimyynnistä, ei verkosta, korkeat tulot",
+        "Kampanjatuotteita, viiniä, ei pieniä lapsia",
+        "Kampanjatuotteita, viiniä, lihaa, korkeat tulot, ei verkkovierailuja"
+    ],
+    "factors": [
+        "Ostoksia postimyynnistä, eri kategorioista, tulot",
+        "Ostoksia alennuksella ja verkosta, isoja lapsia, ikä",
+        "Faktori 3",
+        "Faktori 4"
+    ]
+}
