@@ -145,5 +145,5 @@ def update_factor_scatter(cl):
 
 if __name__ == '__main__':
     #app.run_server(host='0.0.0.0')
-    app.run_server(host='0.0.0.0', port=8080)
+    app.run_server(host='0.0.0.0', port=8050)
 
