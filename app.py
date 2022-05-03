@@ -13,21 +13,31 @@ import numpy as np
 
 import json
 
+# ----------------------------------------------------------------------
+
+datadir = "data"
 datadate = '2022-04-28'
 
-df = pd.read_csv('data/klusterit-{}.csv'.format(datadate))
-dfvars = pd.read_csv('data/klusterimuuttujat2-{}.csv'.format(datadate), sep=";")
-dfcc = pd.read_csv('data/kmeans_centers-{}.csv'.format(datadate), sep=";", index_col=0)
-dfbg = pd.read_csv('data/kmeans_taustamuuttujat-{}.csv'.format(datadate), sep=";", index_col=0)
-dffac = pd.read_csv('data/faktorit-{}.csv'.format(datadate))
+df = pd.read_csv('{}/klusterit-{}.csv'.format(datadir, datadate))
+dfvars = pd.read_csv('{}/klusterimuuttujat2-{}.csv'.format(datadir,
+                                                           datadate),
+                     sep=";")
+dfcc = pd.read_csv('{}/kmeans_centers-{}.csv'.format(datadir, datadate),
+                   sep=";", index_col=0)
+dfbg = pd.read_csv('{}/kmeans_taustamuuttujat-{}.csv'.format(datadir,
+                                                             datadate),
+                   sep=";", index_col=0)
+dffac = pd.read_csv('{}/faktorit-{}.csv'.format(datadir, datadate))
 
-with open('data/descriptions-{}.json'.format(datadate)) as json_file:
+with open('{}/descriptions-{}.json'.format(datadir, datadate)) as json_file:
     descriptions = json.load(json_file)
 df['description']=descriptions['clusters']
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.MATERIA])
 
 server = app.server
+
+# ----------------------------------------------------------------------
 
 app.layout = dbc.Container([
     dbc.NavbarSimple(brand='Klusterikortti, aineisto: "Marketing Campaign"',
@@ -51,6 +61,12 @@ app.layout = dbc.Container([
              ]),
     ], fluid=True)
 
+# ----------------------------------------------------------------------
+
+pos_color = "#2196f3"
+neg_color = "#e51c23"
+bgr_color = "lightgray"
+
 @app.callback(
     Output("stiglitz", "figure"), 
     Input("selected_cluster", "value"))
@@ -58,7 +74,7 @@ def update_bar_chart(cl):
     df2 = df[df.klusteri==cl].transpose()
     df2 = df2[1:9]
     df2.columns = ['data']
-    df2["color"] = np.where(df2['data']<0, "#e51c23", "#2196f3")
+    df2["color"] = np.where(df2['data']<0, neg_color, pos_color)
     fig = go.Figure(data=go.Bar(x=df2.index, y=df2.data,
                                 marker_color=df2.color))
     fig.update_yaxes(range=[-1, 1])
@@ -86,7 +102,7 @@ def update_fraction(cl):
     Input("selected_cluster", "value"))
 def update_largest_vars(cl):
     largest = dfcc.loc[cl].sort_values(ascending=False)[:10].sort_values()
-    colorvec = np.where(largest<0, "#e51c23", "#2196f3")
+    colorvec = np.where(largest<0, neg_color, pos_color)
     fig = go.Figure(data=go.Bar(y=[s[:20] for s in largest.index],
                                 x=largest.values, orientation='h',
                                 marker_color=colorvec))
@@ -98,7 +114,7 @@ def update_largest_vars(cl):
     Input("selected_cluster", "value"))
 def update_smallest_vars(cl):
     smallest = dfcc.loc[cl].sort_values(ascending=False)[-10:]
-    colorvec = np.where(smallest<0, "#e51c23", "#2196f3")
+    colorvec = np.where(smallest<0, neg_color, pos_color)
     fig = go.Figure(data=go.Bar(y=[s[:20] for s in smallest.index],
                                 x=smallest.values, orientation='h',
                                 marker_color=colorvec))
@@ -110,17 +126,23 @@ def update_smallest_vars(cl):
     Input("selected_cluster", "value"))
 def update_factor_scatter(cl):
     dffac["klusteristr"] = dffac["klusteri"].astype(str)
-    all = list(range(1,10))
+    all = list(range(1,99))
     all.remove(cl)
-    dffac["klusteristr"] = dffac["klusteristr"].replace([str(x) for x in all], 99)
+    dffac["klusteristr"] = dffac["klusteristr"].replace([str(x) for x in all],
+                                                        '99')
     fig = px.scatter(dffac, x="faktori1", y="faktori2",
-                     color='klusteristr', title="Faktorivisualisointi",
+                     color='klusteristr',
+                     color_discrete_map = {str(cl): pos_color,
+                                           '99': bgr_color},
+                     title="Faktorivisualisointi",
                      labels={"faktori1": descriptions['factors'][0],
                              "faktori2": descriptions['factors'][1]})
     fig.update_layout(showlegend=False)
     return fig
 
+# ----------------------------------------------------------------------
 
 if __name__ == '__main__':
     app.run_server(host='0.0.0.0', port=8050)
 
+# ----------------------------------------------------------------------
