@@ -1,0 +1,59 @@
+{
+    "TALO": {
+        "order": 0,
+        "description": "Aineellinen elintaso (tulot, kulutus ja vauraus)",
+        "columns": [
+            0,
+            1,
+            2
+        ]
+    },
+    "TERV": {
+        "order": 1,
+        "description": "Terveys",
+        "columns": [
+            4,
+            5
+        ]
+    },
+    "KOUL": {
+        "order": 2,
+        "description": "Koulutus",
+        "columns": [
+            23
+        ]
+    },
+    "TOIM": {
+        "order": 3,
+        "description": "Henkilökohtainen toiminta ja työ",
+        "columns": [
+            10,
+            11,
+            12,
+            13,
+            14
+        ]
+    },
+    "YHTK": {
+        "order": 4,
+        "description": "Äänen saaminen kuuluville yhteiskunnassa, hallinnointi",
+        "columns": []
+    },
+    "SOSS": {
+        "order": 5,
+        "description": "Sosiaaliset yhteydet ja suhteet",
+        "columns": [
+            24
+        ]
+    },
+    "YMPÄ": {
+        "order": 6,
+        "description": "Ympäristö (sen nykyinen ja tuleva tila)",
+        "columns": []
+    },
+    "TURV": {
+        "order": 7,
+        "description": "Turvattomuus sekä taloudellisena että fyysisenä kokemuksena",
+        "columns": []
+    }
+}

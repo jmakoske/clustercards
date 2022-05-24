@@ -1,0 +1,59 @@
+{
+    "TALOUS": {
+        "order": 0,
+        "description": "Aineellinen elintaso (tulot, kulutus ja vauraus)",
+        "columns": [
+            0,
+            1,
+            2
+        ]
+    },
+    "TERVEYS": {
+        "order": 1,
+        "description": "Terveys (koettu terveys ja elintavat)",
+        "columns": [
+            4,
+            5
+        ]
+    },
+    "KOULUTUS": {
+        "order": 2,
+        "description": "Koulutus",
+        "columns": [
+            23
+        ]
+    },
+    "TOIMINTA": {
+        "order": 3,
+        "description": "Henkilökohtainen toiminta ja työ",
+        "columns": [
+            10,
+            11,
+            12,
+            13,
+            14
+        ]
+    },
+    "YHTEISKUNTA": {
+        "order": 4,
+        "description": "Äänen saaminen kuuluville yhteiskunnassa, hallinnointi",
+        "columns": []
+    },
+    "SOSIAALISUUS": {
+        "order": 5,
+        "description": "Sosiaaliset yhteydet ja suhteet",
+        "columns": [
+            24
+        ]
+    },
+    "YMPÄRISTÖ": {
+        "order": 6,
+        "description": "Ympäristö (sen nykyinen ja tuleva tila)",
+        "columns": []
+    },
+    "TURVALLISUUS": {
+        "order": 7,
+        "description": "Turvallisuus sekä taloudellisena että fyysisenä kokemuksena",
+        "columns": []
+    }
+}

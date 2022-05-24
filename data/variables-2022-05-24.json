@@ -1,0 +1,212 @@
+{
+    "Year_Birth": {
+        "description": "customer's year of birth",
+        "background": true,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Age": {
+        "description": "customer's age",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Education": {
+        "description": "customer’s level of education",
+        "background": true,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Education_78": {
+        "description": "customer’s level of education is 7 (master's) or 8 (PhD)",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "KOULUTUS"
+        ]
+    },
+    "Marital_Status": {
+        "description": "customer’s marital status",
+        "background": true,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Married": {
+        "description": "customer’s binary marital status (1=yes, 0=no)",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "SOSIAALISUUS"
+        ]
+    },
+    "Income": {
+        "description": "customer’s yearly household income",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "TALOUS"
+        ]
+    },
+    "Kidhome": {
+        "description": " number of small children in customer’s household",
+        "background": false,
+        "multiplier": -1,
+        "dimensions": [
+            "TALOUS"
+        ]
+    },
+    "Teenhome": {
+        "description": "number of teenagers in customer’s household",
+        "background": false,
+        "multiplier": -1,
+        "dimensions": [
+            "TALOUS"
+        ]
+    },
+    "Dt_Customer": {
+        "description": "date of customer’s enrolment with the company",
+        "background": true,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Recency": {
+        "description": "number of days since the last purchase",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "MntWines": {
+        "description": "amount spent on wine products in the last 2 years",
+        "background": false,
+        "multiplier": -1,
+        "dimensions": [
+            "TERVEYS"
+        ]
+    },
+    "MntFruits": {
+        "description": "amount spent on fruits products in the last 2 years",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "TERVEYS"
+        ]
+    },
+    "MntMeatProducts": {
+        "description": "amount spent on meat products in the last 2 years",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "MntFishProducts": {
+        "description": "amount spent on fish products in the last 2 years",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "MntSweetProducts": {
+        "description": "amount spent on sweet products in the last 2 years",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "MntGoldProds": {
+        "description": "amount spent on gold products in the last 2 years",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "NumDealsPurchases": {
+        "description": "number of purchases made with discount",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "TOIMINTA"
+        ]
+    },
+    "NumWebPurchases": {
+        "description": "number of purchases made through company’s web site",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "TOIMINTA"
+        ]
+    },
+    "NumCatalogPurchases": {
+        "description": "number of purchases made using catalogue",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "TOIMINTA"
+        ]
+    },
+    "NumStorePurchases": {
+        "description": "number of purchases made directly in stores",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "TOIMINTA"
+        ]
+    },
+    "NumWebVisitsMonth": {
+        "description": "number of visits to company’s web site in the last month",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": [
+            "TOIMINTA"
+        ]
+    },
+    "AcceptedCmp3": {
+        "description": "1 if customer accepted the offer in the 3rd campaign, 0 otherwise",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "AcceptedCmp4": {
+        "description": "1 if customer accepted the offer in the 4th campaign, 0 otherwise",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "AcceptedCmp5": {
+        "description": "1 if customer accepted the offer in the 5th campaign, 0 otherwise",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "AcceptedCmp1": {
+        "description": "1 if customer accepted the offer in the 1st campaign, 0 otherwise",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "AcceptedCmp2": {
+        "description": "1 if customer accepted the offer in the 2nd campaign, 0 otherwise",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Complain": {
+        "description": "1 if customer complained in the last 2 years",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Z_CostContact": {
+        "description": "cost to contact a customer",
+        "background": true,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Z_Revenue": {
+        "description": "revenue after client accepting campaign",
+        "background": true,
+        "multiplier": 1,
+        "dimensions": []
+    },
+    "Response": {
+        "description": "1 if customer accepted the offer in the last campaign, 0 otherwise",
+        "background": false,
+        "multiplier": 1,
+        "dimensions": []
+    }
+}

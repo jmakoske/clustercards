@@ -1,0 +1,24 @@
+{
+    "clusters": [
+        "Vähän ostoksia, nuoria, pienet tulot, pieniä lapsia",
+        "Vähän ostoksia, isompia lapsia",
+        "Tehnyt valituksia",
+        "Paljon ostoskertoja, isompia lapsia, ikä",
+        "Paljon ostoksia, korkeat tulot, ei pieniä lapsia",
+        "Kampanjatuotteita, viiniä, lihaa, korkeat tulot"
+    ],
+    "cluster_descriptions": [
+        "Asiakasryhmä koostuu nuorista perheellisistä, joilla on pienet tulot. Ostoksia vähän, mutta verkkopalvelua käytetään keskimääräistä enemmän.",
+        "Asiakasryhmä, joilla sekä ostoskerrat että ostosmäärät keskimääräistä pienempiä. Lapset usein jo teini-iässä.",
+        "Asiakasryhmä, jossa on tehty valitus kahden viime vuoden aikana. Vähän ostoksia. Monilla pieniä lapsia ja pienet tulot. Ikä keskimääräistä korkeampi.",
+        "Asiakasryhmä, joilla paljon ostoskertoja, erityisesti verkosta. Ikä ja tulot vähän keskimääräistä korkeampia. Lapset jo teini-iässä.",
+        "Asiakasryhmä, jossa tehdään paljon ostoksia eri tuoteryhmistä, mutta ei käytetä verkkokauppaa. Keskimääräistä korkeammat tulot. Ei kotona asuvia lapsia.",
+        "Asiakasryhmä, joka on aktiivinen perinteisissä kampanjoissa, ei verkossa. Paljon ostoksia, erityisesti viiniä ja lihaa. Keskimääräistä korkeammat tulot. Ei kotona asuvia lapsia."
+    ],
+    "factors": [
+        "Ostoksia postimyynnistä ja myymälästä, eri tuoteryhmistä, tulot",
+        "Ostoksia alennuksella ja verkosta, teini-ikäisiä lapsia",
+        "Faktori 3",
+        "Faktori 4"
+    ]
+}
